@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity Web Player | VkAppsTestsTemplate</title>
+    <title>Unity Web Player | VkAppsTestsTemplate v1.0.1</title>
     <link rel="shortcut icon" href="TemplateData/favicon.ico">
     <link rel="stylesheet" href="TemplateData/style.css">
     <link rel="manifest" href="manifest.webmanifest">
@@ -100,5 +100,15 @@
       };
       document.body.appendChild(script);
     </script>
+
+    <!--VK-->
+    <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+        
+    <script>
+      const vkBridge = window.vkBridge;
+      vkBridge.send("VKWebAppInit");
+      console.log("VK Bridge initialized");
+    </script>
+
   </body>
 </html>
